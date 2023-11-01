@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,900;1,800;1,900&display=swap');
+
+/* ESTILO GERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: black;
+    height: 100vh;
+}
+
+.interface {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    color: white;
+}
+
+strong {
+    color: #DA0C81;
+}
+
+.flex {
+    display: flex;
+    margin-top: 130px;
+}
+
+h2.subtitulo {
+    color: white;
+    font-size: 2.375rem;
+    text-align: center;
+    margin-top: 120px;
+}
+
+
+/* ESTILO DO CABEÇALHO */
+
+header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 4%;
+    background-color: black;
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+}
+
+header nav.menu-desktop a:hover {
+    color: white;
+    transform: scale(1.08);
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav.menu-desktop ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+header .btn-curriculo button {
+    padding: 10px 40px;
+    font-size: 1.125rem;
+    font-weight: 600;
+    background-color: #DA0C81;
+    color: white;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.btn-curriculo button:hover {
+    box-shadow: 0px 0px 8px #DA0C81;
+    transform: scale(0.5);
+    transform: translateY(-8px);
+}
+
+.content {
+    display: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    line-height: 20px;
+    margin: 40px 600px 40px 400px;
+}
+
+/* ESTILO DO MENU MOBILE  */
+
+.btn-abrir-menu i {
+    color: #DA0C81;
+    font-size: 40px;
+    display: none;
+}
+
+.menu-mobile {
+    background-color: black;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 999999;
+    width: 0%;
+    overflow: hidden;
+    transition: .5s;
+}
+
+.menu-mobile.abrir-menu {
+    width: 70%;
+}
+
+.menu-mobile.abrir-menu~.overlay-menu {
+    display: block;
+}
+
+.menu-mobile .btn-fechar {
+    padding: 20px 5%;
+}
+
+.menu-mobile .btn-fechar i {
+    color: #DA0C81;
+    font-size: 30px;
+}
+
+.menu-mobile nav ul {
+    text-align: right;
+}
+
+.menu-mobile nav ul li a {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 300;
+    padding: 20px 8%;
+    display: block;
+}
+
+.menu-mobile nav ul li a:hover {
+    background-color: #DA0C81;
+    color: black;
+}
+
+.overlay-menu {
+    background-color: rgba(0, 0, 0, 0.39);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 88888;
+    display: none;
+}
+
+/* ESTILO DO TOPO DO SITE */
+
+section.topo-do-site {
+    padding: 60px 4%;
+}
+
+.topo-do-site h1 {
+    font-size: 2.625rem;
+    line-height: 40px;
+}
+
+.topo-do-site h2 {
+    color: #DA0C81;
+}
+
+.topo-do-site .txt-topo-site p {
+    color: white;
+    margin: 40px 0;
+}
+
+/* ANIMAÇÂO DA IMAGEM (QUE AINDA VOU ESCOLHER RSRS) */
+
+/* @keyframes flutuar {
+    0% {
+        top: 0;
+    }
+
+    100% {
+        top: 30px;
+    }
+} */
+
+/* ESTILO DAS ESPECIALIDADES */
+
+section.especialidades {
+    padding: 40px 4%;
+
+}
+
+section.especialidades .flex {
+    gap: 60px;
+}
+
+.especialidades .especialidades-box {
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #DA0C81;
+}
+
+.especialidades .especialidades-box i {
+    font-size: 4.375rem;
+    color: #DA0C81;
+}
+
+.especialidades .especialidades-box h3 {
+    font-size: 1.75rem;
+    margin: 15px 0;
+}
+
+
+/* ESTILO DA PARTE SOBRE MIM */
+
+img {
+    width: 370px;
+    border-radius: 20px;
+}
+
+section.sobre {
+    padding: 80px 4%;
+}
+
+section.sobre .flex {
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre {
+    color: white;
+}
+
+.sobre .txt-sobre h2 {
+    font-size: 2.5rem;
+    line-height: 40px;
+    margin-bottom: 30px;
+}
+
+.sobre .txt-sobre p {
+    margin: 20px 0;
+    text-align: justify;
+}
+
+/* REDES SOCIAIS */
+
+.icons {
+    position: relative;
+    top: 15px;
+    right: 18.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icons li {
+    list-style: none;
+}
+
+.icons li a {
+    display: inline-block;
+    width: 55px;
+    height: 58px;
+    border: 2px solid #DA0C81;
+    border-radius: 50%;
+    background: black;
+    margin-left: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s ease-in-out;
+}
+
+.icons li a:hover {
+    box-shadow: 0px 0px 8px #DA0C81;
+    transform: translateY(-10px);
+}
+
+.icons li a img {
+    transform: scale(0.5);
+    filter: invert(1);
+}
+
+/* ESTILO DOS PROJETOS */
+
+section.portfolio {
+    padding: 80px 4%;
+    box-shadow: 0px 0px 20px 8px #DA0C81;
+}
+
+section.portfolio a {
+    text-decoration: none;
+    color: white;
+}
+
+
+section.portfolio .flex {
+    justify-content: space-around;
+}
+
+.img-port {
+    width: 360px;
+    height: 460px;
+    background-color: #DA0C81;
+    background-size: cover;
+    background-position: 100% 0%;
+    transition: 8s;
+    cursor: pointer;
+    border-radius: 40px;
+    position: relative;
+}
+
+.img-port:hover {
+    background-position: 100% 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000b7;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: white;
+    opacity: 0;
+    transition: .5s;
+}
+
+.overlay:hover {
+    opacity: 1;
+}
+
+/* ESTILO DO RODAPÉ */
+
+footer {
+    padding: 30px 4%;
+}
+
+footer .flex {
+    justify-content: space-between;
+}
+
+footer .line-footer {
+    padding: 20px 0;
+}
+
+.border {
+    border-top: 2px solid #DA0C81;
+}
+
+.btn-social-rodape {
+    margin-left: 1070px;
+}
+
+footer .line-footer h3 {
+    color: #DA0C81;
+}
+
+/* TRBALHANDO COM MEDIA QUERIES */
+
+@media screen and (max-width: 1020px) {
+
+    /* CLASSES GERAIS  */
+    .flex {
+        flex-direction: column-reverse;
+    }
+
+    h2.subtitulo {
+        font-size: 2.125rem;
+        line-height: 30px;
+    }
+
+    /* CABEÇALHO */
+    .menu-desktop,
+    .btn-curriculo {
+        display: none;
+    }
+
+    .btn-abrir-menu i {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 1.563rem;
+    }
+
+    /* TOPO DO SITE */
+    section.topo-do-site {
+        padding: 15px 8%;
+    }
+
+    .topo-do-site h1 {
+        font-size: 1.75rem;
+    }
+
+    section.topo-do-site .flex {
+        gap: 40px;
+    }
+
+    /* ESTILO DAS ESPECIALIDADES */
+    section.especialidades {
+        padding: 40px 8%;
+
+    }
+
+    /* SOBRE MIM */
+    section.sobre {
+        padding: 80px 8%;
+    }
+
+    .sobre .txt-sobre h2 {
+        font-size: 2.125rem;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    .btn-social .icons {
+        right: 8px;
+    }
+
+    img {
+        width: 100%;
+    }
+
+    /* PROJETOS */
+    section.portfolio {
+        padding: 80px 8%;
+    }
+
+    .img-port {
+        width: 100%;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+
+    section.portfolio .flex {
+        gap: 60px;
+    }
+
+    /* RODAPÉ */
+    footer .flex {
+        flex-direction: column;
+    }
+
+    footer .interface {
+        text-align: center;
+    }
+
+    .btn-social-rodape {
+        margin-left: 468px;
+        margin-bottom: 10px;
+    }
+
+}
